@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let admin;
+    let name;
+    name = "Василий";
+    admin = name;
+    alert(admin);
+    console.log(admin);
+</script>
+
+<body>
+    <img src="images/.jpg" id="pic1">   <!--//в консоли показывает ошибку, так как элементы не определён. если поставить цифру, то перед выполнением скрипта будет появляться картинка, которая потом меняется. как лучше поступить в такой ситуации? --> -->
+    <script>
+        let picNumber = Number(prompt("choose the pic's number you would like to see:", "5th is nice one :)"));
+        if (picNumber < 1 || picNumber > 11) {
+            alert("No, no, no... enter number from 1 to 11")
+        } else if (typeof(picNumber) != "number") {
+                alert("No, no, no... enter the number not letters")
+        } else {        
+            pic1.src = `images/${picNumber}.jpg`
+        }
+    </script>
+    <script>
+    let picType = prompt("choose the pic's type you would like to see:", "png or jpg?)");
+    if (picType == "png" || picType == "jpg") {
+        pic1.src = `images/${picNumber}.${picType}`
+    } else {
+        alert("Stop making mistakes")
+    }
+    </script>
+        
+</body>
+</html>
